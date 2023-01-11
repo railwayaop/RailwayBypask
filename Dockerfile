@@ -6,6 +6,5 @@ RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get install -y nodejs
 RUN git clone https://github.com/TeamYukki/YukkiMusicBot/
 RUN cd YukkiMusicBot
-COPY . /Yukki/
-WORKDIR /Yukki/
+RUN pip3 install -U -r requirements.txt
 CMD bash start
