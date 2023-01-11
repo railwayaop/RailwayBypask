@@ -5,6 +5,6 @@ RUN apt-get update -y && apt-get upgrade -y \
     && rm -rf /var/lib/apt/lists/*
 COPY . /app/
 WORKDIR /app/
-RUN git clone https://github.com/TeamYukki/YukkiMusicBot Carbon && cd Carbon
+RUN git clone https://github.com/SexyShekharXD/Carbon Carbon && cd Carbon
 RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
 CMD bash start
