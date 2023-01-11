@@ -1,5 +1,4 @@
-FROM debian:11
-
+FROM python:3.9.7-slim-buster
 RUN apt update && apt upgrade -y
 RUN apt-get install git curl python3-pip ffmpeg -y
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
