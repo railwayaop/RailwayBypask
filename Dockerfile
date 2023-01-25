@@ -6,6 +6,5 @@ RUN apt-get update -y && apt-get upgrade -y \
 COPY . /app/
 WORKDIR /app/
 RUN git clone https://github.com/SexyShekharXD/carbon Carbon
-RUN cd Carbon
-RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
-CMD bash start
+RUN cd Carbon && pip3 install -U -r requirements.txt
+CMD cd Carbon && bash start
